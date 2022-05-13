@@ -29,8 +29,8 @@ app.get("/bmi", function(req, res){
 app.post("/bmi", function(req, res){
 
   var weight = parseInt(req.body.weight);
-  var height = parseInt(req.body.height);
-
+  var height = parseFloat(req.body.height);
+  
   var n = weight / (height * height);
 
   res.send("Your BMI is : " + n);
